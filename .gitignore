@@ -1,5 +1,17 @@
 # .gitignore for C# / ASP.NET Core
 
+**/.vscode/**
+**/.idea/**
+**/bin/**
+**/obj/**
+**/out/**
+**/publish/**
+**/*.user**
+**/*.suo**
+**/*.userosscache**
+**/__tests__/**
+**/.vscode
+
 # Build results
 bin/
 obj/
@@ -49,4 +61,3 @@ desktop.ini
 
 # Publish output
 publish/
-wwwroot/
