@@ -1,13 +1,26 @@
+using Backend.Database;
+
 namespace Backend;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        var builder = WebApplication.CreateBuilder(args);
-        var app = builder.Build();
+        WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+        
+        builder.Services.AddControllers();
+        builder.Services.AddDbContext<AppDbContext>();
 
-        app.MapGet("/", () => "Hello World!");
+        builder.Services.AddLogging();
+        
+        WebApplication app = builder.Build();
+
+        app.UseHttpsRedirection();
+                
+        app.UseAuthentication();
+        app.UseAuthorization();
+        
+        app.MapDefaultControllerRoute();
 
         app.Run();
     }
