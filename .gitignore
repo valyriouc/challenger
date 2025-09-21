@@ -1,0 +1,52 @@
+# .gitignore for C# / ASP.NET Core
+
+# Build results
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+*.dbmdl
+*.pdb
+*.cache
+*.ide
+
+# ASP.NET Core secrets
+secrets.json
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.psess
+
+# Rider files
+.idea/
+
+# Resharper files
+*.DotSettings.user
+
+# Others
+*.swp
+*.tmp
+*.bak
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Publish output
+publish/
+wwwroot/
